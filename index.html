@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Uol</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="./assets/logo 1.png" alt="Bate-papo UOL" />
+      <button class="chats-btn" onclick="openSidebar();">
+        <img
+          class="chats"
+          src="./assets/people 2.svg"
+          alt="Opções de Mensagens"
+        />
+      </button>
+    </header>
+    <div class="content"></div>
+    <div class="end-of-chat"></div>
+    <footer>
+      <div class="message-box">
+        <input id="messageArea" type="text" placeholder="Escreva aqui..." />
+        <p class="message-recipient">Enviando para Todos (público)</p>
+      </div>
+      <button class="send-btn" onclick="sendMessage();">
+        <img
+          class="send"
+          src="./assets/Vector (13).svg"
+          alt="Enviar Mensagem"
+        />
+      </button>
+    </footer>
+    <button onclick="openSidebar();" class="mask-layer"></button>
+    <div class="sidebar">
+      <div class="contact-options">
+        <p>Escolha um contato para enviar mensagem</p>
+        <button onclick="toContact('Todos', this);" class="sidebar-btn">
+          <img
+            class="sidebar-btn__icon"
+            src="./assets/people 2.svg"
+            alt="Todos"
+          />
+          <h4 class="sidebar-btn__text">Todos</h4>
+          <img
+            class="sidebar-btn__checked"
+            src="./assets/Vector (14).svg"
+            alt="checked"
+          />
+        </button>
+      </div>
+      <div class="contact-privacy">
+        <p>Escolha a visibilidade</p>
+        <button onclick="setPrivacy('message', this);" class="sidebar-btn">
+          <img
+            class="sidebar-btn__icon"
+            src="./assets/lock-open 1.svg"
+            alt="Público"
+          />
+          <h4 class="sidebar-btn__text">Público</h4>
+          <img
+            class="sidebar-btn__checked"
+            src="./assets/Vector (14).svg"
+            alt="checked"
+          />
+        </button>
+        <button
+          onclick="setPrivacy('private_message', this);"
+          class="sidebar-btn"
+        >
+          <img
+            class="sidebar-btn__icon"
+            src="./assets/lock-closed 1.svg"
+            alt="Reservadamente"
+          />
+          <h4 class="sidebar-btn__text">Reservadamente</h4>
+          <img
+            class="sidebar-btn__checked hidden"
+            src="./assets/Vector (14).svg"
+            alt="checked"
+          />
+        </button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

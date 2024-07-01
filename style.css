@@ -1,0 +1,204 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+  box-shadow: none;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 1);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.05);
+}
+
+header .logo {
+  margin: 18px;
+  width: 75px;
+  height: 53px;
+}
+
+header .chats {
+  margin: 18px;
+  width: 45px;
+  height: 45px;
+}
+
+.content {
+  background-color: rgba(243, 243, 243, 1);
+  width: 100%;
+  min-height: 100vw;
+  padding: 106px 0px 90px 0px;
+}
+
+.message {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  padding: 16px 8px;
+  background-color: rgba(255, 255, 255, 1);
+  align-items: center;
+  margin-bottom: 4px;
+  line-height: 20px;
+  box-sizing: border-box;
+}
+
+.private {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  padding: 16px 8px;
+  align-items: center;
+  margin-bottom: 4px;
+  line-height: 20px;
+  box-sizing: border-box;
+  background-color: rgba(255, 222, 222, 1);
+}
+
+.status {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  padding: 16px 8px;
+  align-items: center;
+  margin-bottom: 4px;
+  line-height: 20px;
+  box-sizing: border-box;
+  background-color: rgba(220, 220, 220, 1);
+}
+
+article h3 {
+  color: rgba(170, 170, 170, 1);
+}
+
+article span {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.41px;
+  text-align: left;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 1);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.05);
+}
+
+footer .message-box {
+  margin: 15px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+footer .send {
+  width: 26px;
+  height: 26px;
+  margin: 27px;
+}
+
+footer input {
+  border: none;
+  background: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+footer input::placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+footer p {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(80, 80, 80, 1);
+}
+
+.mask-layer {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  display: none; /* Inicialmente oculto */
+}
+
+.mask-layer.show {
+  display: block; /* Mostrar quando ativado */
+}
+
+.sidebar {
+  width: 259px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 3;
+  right: -259px;
+  top: 0;
+  position: fixed;
+  transition: right 0.3s ease;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.75px;
+  text-align: center;
+  padding: 20px;
+}
+
+.sidebar-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+  padding: 0px 18px;
+  margin-bottom: 12px;
+}
+
+.sidebar-btn__icon {
+  width: 25px;
+  height: 25px;
+}
+
+.sidebar-btn__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+}
+
+.sidebar-btn__checked {
+  position: absolute;
+  right: 27px;
+}
+
+.hidden {
+  display: none;
+}
